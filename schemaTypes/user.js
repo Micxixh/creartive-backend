@@ -4,14 +4,15 @@ export default {
     type: 'document',
     fields: [    
         {
-          name: 'userName',      
-          title: 'UserName',      
-          type: 'string',     
+          name: 'username',      
+          title: 'Username',      
+          type: 'string', 
+          validation: Rule => Rule.required(),     
         },    
-        {      
-          name: 'image',      
-          title: 'Image',      
-          type: 'string',  
+        {
+          name: 'pfp',
+          title: 'Pfp',
+          type: 'string',
         },
         {
           name: 'password',
@@ -19,9 +20,10 @@ export default {
           type: 'string',
         },
         {
-          name: 'Email',
-          title: 'Email',
-          type: 'string',
+          name: 'email', 
+            title: 'Email',
+            type: 'string',
+            validation: Rule => Rule.required().email(), 
         },
     ],
 }
